@@ -1,0 +1,88 @@
+\documentclass{standalone}
+\usepackage{pgfgantt}
+\usepackage{lscape}
+\begin{document}
+\title{\date{\today}}
+\maketitle
+%\begin{landscape}
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33}
+\renewcommand\sfdefault{phv}
+\renewcommand\mddefault{mc}
+\renewcommand\bfdefault{bc}
+\setganttlinklabel{ps}{10/01/2021}
+\sffamily
+\begin{ganttchart}[
+    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+    hgrid style/.style={draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    today=1,
+    today rule/.style={
+      draw=black!64,
+      dash pattern=on 3.5pt off 4.5pt,
+      line width=1.5pt
+    },
+    today label font=\small\bfseries,
+    title/.style={draw=none, fill=none},
+    title label font=\bfseries\footnotesize,
+    title label node/.append style={below=7pt},
+    include title in canvas=false,
+    bar label font=\mdseries\small\color{black!70},
+    bar label node/.append style={left=2cm},
+    bar/.append style={draw=none, fill=black!63},
+    bar incomplete/.append style={fill=barblue},
+    bar progress label font=\mdseries\footnotesize\color{black!70},
+    group incomplete/.append style={fill=groupblue},
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style={left=.6cm},
+    group progress label font=\bfseries\small,
+    link/.style={-latex, line width=1.5pt, linkred},
+    link label font=\scriptsize\bfseries,
+    link label node/.append style={below left=-2pt and 0pt}
+  ]{1}{32}
+  \gantttitle[
+    title label node/.append style={below left=7pt and -3pt}
+  ]{WEEKS:\quad1}{1}
+  \gantttitlelist{2,...,32}{1} \\
+  \ganttgroup[progress=22.2]{Stage 1}{1}{11} \\
+\ganttbar[progress=100, name=WBS1A]{\textbf{i} Title page}{1}{1} \\
+\ganttbar[progress=100, name=WBS1B]{\textbf{ii} Declaration}{1}{1} \\
+\ganttbar[progress=0, name=WBS1C]{\textbf{Chapter 1} Introduction}{2}{4} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 2} Background}{4}{6} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 1}{6}{6} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 3} Related Work}{6}{8} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 4} Preparation \& Research}{8}{11}\\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 2}{10}{10} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Contingency} Contingency Period 1}{11}{11} \\
+\\[grid]
+  \ganttgroup[progress=0]{Stage 2}{11}{22} \\
+  \ganttbar[progress=0]{\textbf{Chapter 5} Results \& Analysis}{11}{15} \\
+  \ganttbar[progress=0]{\textbf{Chapter 6} Discussion}{15}{21} \\
+   \ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 3}{15}{15} \\
+  \ganttbar[progress=0]{\textbf{Chapter 7} Evaluation}{17}{21}\\
+  \ganttbar[progress=0]{\textbf{Backmatter} Appendices}{21}{21} \\
+  \ganttbar[progress=0, name=WBS1D]{\textbf{Contingency} Contingency Period 2}{21}{21} \\
+   \ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 4}{22}{22} \\
+  \\[grid]
+  \ganttgroup[progress=0]{Stage 3}{22}{32} \\
+  \ganttbar[progress=0]{\textbf{Chapter 8} Further Work}{22}{26} \\
+  \ganttbar[progress=0]{\textbf{Chapter 9} Discussion}{26}{30} \\
+  \ganttbar[progress=0]{\textbf{iv} Abstract}{30}{30} \\
+  \ganttbar[progress=0]{\textbf{v} Table of contents}{31}{31} \\
+  \ganttbar[progress=0, name=WBS1D]{\textbf{Contingency} Contingency Period 3}{32}{32} \\
+   \ganttbar[progress=0, name=WBS1D]{\textbf{Review} Final Review}{31}{32}\\
+  \\[grid]
+  \ganttgroup[progress=0]{Stage 4}{1}{32} \\
+  \ganttbar[progress=0 ]{\textbf{iii} Acknowledgements}{1}{30} \\
+  \ganttbar[progress=0]{\textbf{vi} List of figures}{11}{30} \\
+  \ganttbar[progress=0]{\textbf{vii} List of tables}{11}{30} \\
+  \ganttbar[progress=0]{\textbf{viii} Nomenclature}{11}{30}\\
+     \ganttbar[progress=0]{\textbf{Backmatter} Bibliography}{2}{30} \\
+       \ganttbar[progress=0]{\textbf{Backmatter} Index}{16}{32} 
+\end{ganttchart}
+%\end{landscape}
+\end{document}

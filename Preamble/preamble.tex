@@ -1,0 +1,45 @@
+\ifsetCustomMargin
+  \RequirePackage[left=37mm,right=30mm,top=35mm,bottom=30mm]{geometry}
+  \setFancyHdr % To apply fancy header after geometry package is loaded
+\fi
+
+
+\raggedbottom
+
+\usepackage{enumitem}
+
+\usepackage{algpseudocode}
+
+
+\RequirePackage[labelsep=space,tableposition=top]{caption}
+\renewcommand{\figurename}{Fig.} 
+
+
+%\usepackage{rotating}
+%\usepackage{wrapfig}
+
+
+\usepackage{subcaption}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+%\usepackage{multicol}
+%\usepackage{longtable}
+\usepackage{tabularx}
+
+
+\usepackage{siunitx}
+
+\ifuseCustomBib
+   \RequirePackage[square, sort, numbers, authoryear]{natbib}
+\fi
+
+\renewcommand{\bibname}{References}
+
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+\usepackage{enumitem}
+\usepackage{nomencl}
