@@ -2,8 +2,6 @@
 \usepackage{pgfgantt}
 \usepackage{lscape}
 \begin{document}
-\title{\date{\today}}
-\maketitle
 %\begin{landscape}
 \definecolor{barblue}{RGB}{153,204,254}
 \definecolor{groupblue}{RGB}{51,102,254}
@@ -51,15 +49,17 @@
   \ganttgroup[progress=22.2]{Stage 1}{1}{11} \\
 \ganttbar[progress=100, name=WBS1A]{\textbf{i} Title page}{1}{1} \\
 \ganttbar[progress=100, name=WBS1B]{\textbf{ii} Declaration}{1}{1} \\
-\ganttbar[progress=0, name=WBS1C]{\textbf{Chapter 1} Introduction}{2}{4} \\
-\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 2} Background}{4}{6} \\
-\ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 1}{6}{6} \\
-\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 3} Related Work}{6}{8} \\
-\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 4} Preparation \& Research}{8}{11}\\
-\ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 2}{10}{10} \\
-\ganttbar[progress=0, name=WBS1D]{\textbf{Contingency} Contingency Period 1}{11}{11} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 2} Background}{2}{4} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 1}{4}{4} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 3} Related Work}{4}{6} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Chapter 4} Preparation \& Research}{6}{9}\\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 2}{9}{9} \\
+\ganttbar[progress=0, name=WBS1D]{\textbf{Contingency} Contingency Period 1}{10}{10} \\
+  \ganttbar[progress=0, name=WBS1D]{\textbf{Appendices} Lab Analysis 1}{9}{11} \\
 \\[grid]
   \ganttgroup[progress=0]{Stage 2}{11}{22} \\
+  \ganttbar[progress=0, name=WBS1D]{\textbf{Appendices} Lab Analysis 2}{11}{13} \\
+  \ganttbar[progress=0, name=WBS1D]{\textbf{Appendices} Lab Analysis 3}{13}{15} \\
   \ganttbar[progress=0]{\textbf{Chapter 5} Results \& Analysis}{11}{15} \\
   \ganttbar[progress=0]{\textbf{Chapter 6} Discussion}{15}{21} \\
    \ganttbar[progress=0, name=WBS1D]{\textbf{Review} Iterative Review 3}{15}{15} \\
@@ -72,6 +72,7 @@
   \ganttbar[progress=0]{\textbf{Chapter 8} Further Work}{22}{26} \\
   \ganttbar[progress=0]{\textbf{Chapter 9} Discussion}{26}{30} \\
   \ganttbar[progress=0]{\textbf{iv} Abstract}{30}{30} \\
+  \ganttbar[progress=0, name=WBS1C]{\textbf{Chapter 1} Introduction}{30}{31} \\
   \ganttbar[progress=0]{\textbf{v} Table of contents}{31}{31} \\
   \ganttbar[progress=0, name=WBS1D]{\textbf{Contingency} Contingency Period 3}{32}{32} \\
    \ganttbar[progress=0, name=WBS1D]{\textbf{Review} Final Review}{31}{32}\\
